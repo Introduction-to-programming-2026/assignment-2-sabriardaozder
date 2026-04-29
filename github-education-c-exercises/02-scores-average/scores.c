@@ -1,25 +1,21 @@
-#include <cs50.h>
 #include <stdio.h>
-
-// TODO: change N if you want more inputs
-const int N = 3;
-
-// TODO: implement this function
-float average(int length, int array[]);
 
 int main(void)
 {
-    int scores[N];
+    int scores[3];
 
-    // TODO: ask user for N scores and store them in scores[]
-    // Example prompt: "Score: "
+    for (int i = 0; i < 3; i++)
+    {
+        printf("Score: ");
+        scanf("%d", &scores[i]);
+    }
 
-    // TODO: print average
-    // Example: printf("Average: %.2f\n", average(N, scores));
-}
+    int sum = 0;
 
-float average(int length, int array[])
-{
-    // TODO: compute and return average
-    return 0.0;
+    for (int i = 0; i < 3; i++)
+    {
+        sum += scores[i];
+    }
+
+    printf("Average: %.2f\n", (float) sum / 3);
 }
